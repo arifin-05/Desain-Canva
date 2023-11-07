@@ -64,6 +64,58 @@ nav ul li a{
     color: #000000;
     font-size: 22px;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+    color: #D6AD60;
+  }
+  .text-container {
+    background-color: #122620;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  li {
+    padding: 1rem 2rem;
+  }
+  a {
+    text-decoration: none;
+    position: relative;
+    color: black;
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 8px 0;
+  }
+  .line::after {
+    content: "";
+    border-bottom: solid 4px #B68D40;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+  }
+  .line:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  @keyframes line {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
  
 .text-container p:nth-child(2){
     font-family: calibri;
